@@ -38,7 +38,7 @@ function App() {
             <main>
                 <section id="core-concepts">
                     <h2>Core Concepts</h2>
-                    <ul>
+                    {/*<ul>
                         <CoreConcept
                             title="Components"
                             description="The core UI building block - compose the user interface by combining multiple components."
@@ -51,6 +51,11 @@ function App() {
                         />
                         <CoreConcept {...CORE_CONCEPTS[2]}/>
                         <CoreConcept {...CORE_CONCEPTS[3]} />
+                    </ul>*/}
+                    <ul>
+                        {CORE_CONCEPTS.map((CORE_CONCEPT) => (
+                            <CoreConcept key={CORE_CONCEPT.title} {...CORE_CONCEPT}/>
+                        ))}
                     </ul>
                 </section>
                 <section id="examples">
